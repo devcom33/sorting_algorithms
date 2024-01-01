@@ -1,4 +1,5 @@
 #include "sort.h"
+#include <stdbool.h>
 
 void swap_node_ahead(listint_t **list, listint_t **tail, listint_t **shaker);
 void swap_node_behind(listint_t **list, listint_t **tail, listint_t **shaker);
@@ -64,7 +65,9 @@ void swap_node_behind(listint_t **list, listint_t **tail, listint_t **shaker)
 void cocktail_sort_list(listint_t **list)
 {
 	listint_t *tail, *shaker;
-	bool shaken_not_stirred = false;
+	bool shaken_not_stirred;
+
+	shaken_not_stirred = false;
 
 	if (list == NULL || *list == NULL || (*list)->next == NULL)
 		return;
