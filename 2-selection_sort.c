@@ -19,10 +19,10 @@ void selection_sort(int *array, size_t size)
 			{
 				min_index = j;
 			}
-			print_array(array, size);
 		}
 		temp = array[i];
 		array[i] = array[min_index];
 		array[min_index] = temp;
+		print_array(array, size);
     	}
 }
